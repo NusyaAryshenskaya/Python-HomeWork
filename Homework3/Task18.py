@@ -12,7 +12,7 @@ from random import randint
 array_length = int(input('Введите количество элементов в массиве: '))
 array = [randint(1, 20) for _ in range(array_length)]
 print(array)
-number = int(float(input('Введите чиcло X: ')))
+numb = int(float(input('Введите чиcло X: ')))
 x_max = 20
 for i in array:    
     if abs(i - number) < x_max:
