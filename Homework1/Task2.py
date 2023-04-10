@@ -16,3 +16,4 @@ summ = summ + num % 10
 
 print ("Сумма цифр равна: ")
 print (summ)
+{{{{{{}}}}}}
