@@ -8,7 +8,7 @@ def show_phonebook():
 
 def create_contact():
     file = open('phonebook.txt', 'a', encoding='UTF-8')
-    data = input('Введите данные ФИО, телефон, комментарий (через ;): ')
+    data = input('Для добавления контакта введите ФИО, телефон, комментарий (через ;): ')
     file.write('\n' + data)
     file.close()
     print("Контакт добавлен")
@@ -31,11 +31,11 @@ def change_contact():
     data = file.readlines()
     for i in range(len(data)):
         if change_data in data[i]:
-            print(f"{data[i]} \n Этот контакт редактируем? Если правильно, то введите 'да' иначе любое слово")
+            print(f"{data[i]} \n Этот контакт редактируем? Если правильно, то введите 'да' ")
             temp = input()
             if temp == 'да':
                 list1 = data[i].split(';')
-                j = int(input("Введите '1', если хотите отредактировать ФИО,'2' если контакт или '3' если комментарий: "))
+                j = int(input("Какие изменения внести: '1'  ФИО,'2' номер телефона или '3' комментарий: "))
                 list1[j - 1] = input('Введите новые данные: ')
                 data[i] = ";".join(list1)
                 if j == 3:
@@ -56,7 +56,7 @@ def del_contact():
     for item in data:
         if del_data in item:
             data.remove(item)
-            print(f"Контакт {item[0]} удален")
+            print(f"Контакт удален")
     file.close()
 
     file = open('phonebook.txt', 'w', encoding='UTF-8')
