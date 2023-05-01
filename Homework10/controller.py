@@ -4,7 +4,7 @@ from classes import Contact, PhoneBook
 
 
 def start():
-    phonebook = PhoneBook('sample.txt')
+    phonebook = PhoneBook('phone_book.txt')
     while True:
         choice = view.main_menu()
         match choice:
